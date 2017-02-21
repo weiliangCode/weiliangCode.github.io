@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.css"/>
+	<style type="text/css">
+		header.mui-bar-nav{
+			background: #0398ff;
+			
+		}
+		
+		header.mui-bar-nav h1{
+			color: #fff;
+		}
+		
+		li,ul{
+			list-style: none;
+		}
+		
+		.m_topNav{
+			display: flex;
+			height: 44px;
+			padding-top: 10px;
+			box-sizing: border-box;
+			background: #fff;
+		}
+		.mui_cell{
+			flex: 1;
+			text-align: center;
+		}
+		
+		.mui_cell a{
+			color: #0398ff;
+			line-height: 20px;
+			padding-bottom: 5px;
+		}
+		.mui_cell .active{
+			border-bottom: 2px solid #0398ff;
+		}
+		
+		.m_c{
+			margin-top: 40%;
+			/*background: pink;*/
+			height: 160px;
+			text-align: center;
+			
+		}
+		
+		.m_c img{
+			height: 40%;
+		}
+		
+		.m_c p{
+			height: 20%;
+			margin-top: 5%;
+			font-size: 14px;
+		}
+		
+		.m_c input{
+			height: 20%;
+			width:60%;
+			background: #56d176;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">订单</h1>
+	</header>
+
+	
+	<div class="mui-content">
+		<div class="m_topNav">
+            <li class="mui_cell">
+                <a class="active">外卖</a>
+            </li>
+            <li class="mui_cell">
+                <a>早餐</a>
+            </li>
+		</div>
+		
+		<div class="m_c">
+			<img src="../images/indent001.jpg"/>
+	    	<p>登录后查看外卖订单</p>
+	    	<input type="button" value="立即登录" />
+		</div>
+	</div>
+	
+    
+    <script src="../js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    mui.init()
+    </script>
+</body>
+</html>

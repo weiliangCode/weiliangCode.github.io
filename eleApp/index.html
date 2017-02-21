@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <style type="text/css">
+    	.mui-bar-tab .iconfont{
+    		font-size: 20px;
+    		line-height: 20px;
+    	}
+    </style>
+   
+    
+    
+</head>
+<body>
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active" title="home">
+	        <span class="mui-icon iconfont icon-changyonglogo40"></span>
+	        <span class="mui-tab-label">外卖</span>
+	    </a>
+	    <a class="mui-tab-item" title="find">
+	        <span class="mui-icon iconfont icon-faxian"></span>
+	        <span class="mui-tab-label">发现</span>
+	    </a>
+	    <a class="mui-tab-item" title="indent">
+	        <span class="mui-icon iconfont icon-dingdan"></span>
+	        <span class="mui-tab-label">订单</span>
+	    </a>
+	    <a class="mui-tab-item" title="my">
+	        <span class="mui-icon iconfont icon-iconfontwode"></span>
+	        <span class="mui-tab-label">我的</span>
+	    </a>
+	</nav>
+	
+	
+	
+</body>
+ 	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		
+		mui.plusReady(function(){
+			//将四个子页面创建出来
+			var subpages = ['home', 'find', 'indent', 'my'];
+			for (var i = 0; i < 4; i++) {
+				var path = 'html/'+subpages[i]+'.html';
+				var style = {
+					top: '0px',
+					bottom: '50px'
+				}
+				var wv = plus.webview.create(path, subpages[i], style); 
+				
+				//将四个子页面添加到当前页
+				plus.webview.currentWebview().append(wv);
+				//隐藏所有子页面
+				wv.hide();
+			}
+			//显示第一个首页
+			plus.webview.show(plus.webview.getWebviewById('home'), 'none');
+			
+			//tab切换事件
+			mui('.mui-bar-tab').on('tap', 'a', function(){
+				console.log(JSON.stringify(this.index))
+				plus.webview.show(plus.webview.getWebviewById(this.title), 'fade-in',300);
+			})
+				
+				
+				
+		})
+	</script>
+</html>

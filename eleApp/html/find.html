@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.css"/>
+	<style type="text/css">
+		header.mui-bar-nav{
+			background: #0398ff;
+		}
+		
+		header.mui-bar-nav h1{
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">发现</h1>
+	</header>
+	
+    
+    <script src="../js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	mui.init({
+    		 subpages:[{
+		      url:"find_content.html",//子页面HTML地址，支持本地地址和网络地址
+		      id:"find_content",//子页面标志
+		      styles:{
+		        top:"45px",//子页面顶部位置
+		        bottom:"0px"//子页面底部位置
+		      }
+		    }]
+    	})
+    </script>
+</body>
+</html>
