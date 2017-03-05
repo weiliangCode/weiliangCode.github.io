@@ -1,0 +1,51 @@
+<ion-view view-title="免费">
+	<ion-nav-buttons side="left">
+		<button class="button">分类</button>
+	</ion-nav-buttons>
+	
+	<ion-nav-buttons side="right">
+		<button class="button">设置</button>
+	</ion-nav-buttons>
+	
+	
+	<ion-content delegate-handle="content" id="gratis">
+
+		<ion-refresher spinner="dots" on-refresh="refresh()"></ion-refresher>
+		
+		<div >
+			<div class="search">
+				<span class="icon ion-search"></span>
+				<input type="text" placeholder="60万款应用搜搜看" ng-model="searchInt"/>
+			</div>
+			<!-- 列表数据 -->
+			<ul class="main-list">
+				<li class="main-item" ng-repeat="item in listData | filter : {name:searchInt}">
+					<div class="item-top">
+						<div class="item-left">
+							<img ng-src="{{item.iconUrl}}"/>
+						</div>
+						<div class="item-rigth">
+							<h3>{{$index+1}}.{{item.name}}</h3>
+							<p>评分:{{ item.starCurrent }}</p>
+							<span class="icon ion-star" ng-class="{red:item.starCurrent>=1,gre:item.starCurrent<1}"></span>
+							<span class="icon ion-star" ng-class="{red:item.starCurrent>=2,gre:item.starCurrent<2}"></span>
+							<span class="icon ion-star" ng-class="{red:item.starCurrent>=3,gre:item.starCurrent<3}"></span>
+							<span class="icon ion-star" ng-class="{red:item.starCurrent>=4,gre:item.starCurrent<4}"></span>
+							<span class="icon ion-star" ng-class="{red:item.starCurrent>=5,gre:item.starCurrent<5}"></span>
+							<div class="item-rigthBtn">
+								<span class="icon ion-chevron-right"></span>
+								<span class="price">￥{{item.currentPrice | number:1}}</span>
+								<span class="category">游戏</span>
+							</div>
+						</div>
+					</div>
+					<div class="item-bottom">
+						<p>分享:{{item.shares}}次 收藏:{{item.favorites}}次 下载:{{item.downloads}}次</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<ion-infinite-scroll immediate-check="false" distance="1%" ng-if="canLoadMore" on-infinite="loadMore()"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

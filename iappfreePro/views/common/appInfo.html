@@ -1,0 +1,37 @@
+<ion-view view-title="应用详情">
+	
+	<ion-content id="appInfo">
+		<div class="content">
+			<div class="above">
+				<div class="above-top">
+					<!--<img ng-src="{{infoData.iconUrl}}"/>-->
+					<img src="images/categorylist/category_Book.jpg"/>
+					<div class="above-top-right">
+						<h3>{{infoData.name}}</h3>
+						<p>原价:{{infoData.lastPrice | number : 2}} 限免中{{infoData.fileSize}}MB</p>
+						<p>类型:游戏 &nbsp;&nbsp; 评分:{{infoData.starCurrent}}</p>
+					</div>
+				</div>
+				<ul class="mid">
+					<li>分享</li>
+					<li>收藏</li>
+					<li>下载</li>
+				</ul>
+				<div class="bottom">
+					<ion-scroll delegate-handle="subheader" direction="x">
+						<div ng-style="scrollStyle" class="channel-wrapper">
+							<img ng-src="{{item.smallUrl}}" ng-repeat="item in infoData.photos"/>
+						</div>
+					</ion-scroll>
+					<p>{{infoData.description}}</p>
+				</div>
+			</div>
+			
+			<div class="below">
+				<p>请允许调用位置信息，方可使用此功能！您可以在“设备->隐私->定位”中启用。</p>
+				<span>附近的人还在用:</span>
+			</div>
+		</div>
+	</ion-content>
+	
+</ion-view>

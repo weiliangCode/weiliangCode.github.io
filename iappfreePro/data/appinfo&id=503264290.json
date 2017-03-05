@@ -1,0 +1,44 @@
+{
+    "applicationId": "503264290",
+    "slug": "dangleitis-hockey",
+    "name": "策略曲棍球",
+    "releaseDate": "2013-04-12",
+    "currentVersion": "1.4.2",
+    "currentPrice": "0",
+    "lastPrice": "6",
+    "priceTrend": "limited",
+    "expireDatetime": "2017-03-05 05:17:12.0",
+    "categoryId": 6014,
+    "categoryName": "Game",
+    "fileSize": "38.72",
+    "description": "回合制的曲棍球策略类游戏。画面精美，玩家需要同时控制包括守门员的四个角色，角色在每回合都有一次移动、传球、射门等机会，玩家必须熟练每个球员的移动距离。游戏支持双人同机对战，玩家可以邀请好友一同游戏。",
+    "description_long": "DANGLE, HIT and NEVER QUIT!\n\nDangleitis Hockey is a challenging game of MAJOR strategy and HUGE bragging rights! \n\nPlaying with the classic rules of 3 on 3 street hockey. Your goal is to pick players and command the custom squad of critters to take tactical gambles and WIN the game at all cost. \n\n-Dangleitis is the very first turn based hockey game of it's kind!\n\n-30 FREE players included!\n\n-7 ALL STAR players for purchase.\n\n-Head to Head or Single player mode",
+    "systemRequirements": "与 iPhone、iPod touch、iPad 兼容。需要 iOS 4.3 或更高版本",
+    "sellerId": "503264293",
+    "sellerName": "Fighter Jet Studios",
+    "language": "英语",
+    "iconUrl": "http://photo.candou.com/i/114/2974e3a1afcf77d8574c47f2be5bcd9b",
+    "itunesUrl": "http://itunes.apple.com/cn/app/dangleitis-hockey/id503264290?mt=8",
+    "downloads": "1789",
+    "starCurrent": "4.5",
+    "starOverall": "4.5",
+    "ratingOverall": "0",
+    "releaseNotes": "Fix a crash when playing without network connection",
+    "updateDate": "2014-10-17 15:44:50",
+    "appurl": "1",
+    "newversion": "1.2",
+    "photos": [
+        {
+            "smallUrl": "http://photo.candou.com/s/o1/01ae9a9556da6ebf779c1a9c21b721d9",
+            "originalUrl": "http://photo.candou.com/s/o0/01ae9a9556da6ebf779c1a9c21b721d9"
+        },
+        {
+            "smallUrl": "http://photo.candou.com/s/o1/d03d1fe51a89d725c748944b577ba2ea",
+            "originalUrl": "http://photo.candou.com/s/o0/d03d1fe51a89d725c748944b577ba2ea"
+        },
+        {
+            "smallUrl": "http://photo.candou.com/s/o1/1db166dfbda9db67c7d2bce8105f3f72",
+            "originalUrl": "http://photo.candou.com/s/o0/1db166dfbda9db67c7d2bce8105f3f72"
+        }
+    ]
+}

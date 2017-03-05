@@ -1,0 +1,52 @@
+{
+    "applicationId": "455680974",
+    "slug": "rhythm-repeat",
+    "name": "节奏重复",
+    "releaseDate": "2014-07-01",
+    "currentVersion": "2.3",
+    "currentPrice": "0",
+    "lastPrice": "12",
+    "priceTrend": "limited",
+    "expireDatetime": "2017-03-05 01:38:53.0",
+    "categoryId": 6014,
+    "categoryName": "Game",
+    "fileSize": "16.69",
+    "description": "界面清新简单的音乐节奏游戏。游戏的操作非常简单，只需根据提示依次点击相应的图标即可，共有三种乐曲选择。",
+    "description_long": "一款音乐游戏。游戏很简单，五颜六色的按钮会以一个旋律闪烁，之后你要用相同的顺序重复演奏一遍，如果你错过一个音符，你就会失去一个生命值，所有的生命值用完游戏也就结束了哦。你是一个音乐爱好者么？准备开始与音乐的互动吧！",
+    "systemRequirements": "与 iPhone、iPod touch、iPad 兼容。 需要 iOS 3.1.3 或更高版本",
+    "sellerId": "455680982",
+    "sellerName": "Filpo Games",
+    "language": "EN",
+    "iconUrl": "http://photo.candou.com/i/114/55b07f3725eae8b3cafc9bce10d16e46",
+    "itunesUrl": "http://itunes.apple.com/cn/app/rhythm-repeat/id455680974?mt=8",
+    "downloads": "5461",
+    "starCurrent": "4.0",
+    "starOverall": "4.0",
+    "ratingOverall": "0",
+    "releaseNotes": "Multi-Touch bug fixed",
+    "updateDate": "2014-10-17 15:45:27",
+    "appurl": "1",
+    "newversion": "1.1",
+    "photos": [
+        {
+            "smallUrl": "http://photo.candou.com/s/o1/c8c0429206beb4d9d8b1b448296a6e4f",
+            "originalUrl": "http://photo.candou.com/s/o0/c8c0429206beb4d9d8b1b448296a6e4f"
+        },
+        {
+            "smallUrl": "http://photo.candou.com/s/o1/5e5217366ad8a049824ee2263d574393",
+            "originalUrl": "http://photo.candou.com/s/o0/5e5217366ad8a049824ee2263d574393"
+        },
+        {
+            "smallUrl": "http://photo.candou.com/s/o1/87eafb04aaf2341b7db4f6189ad67096",
+            "originalUrl": "http://photo.candou.com/s/o0/87eafb04aaf2341b7db4f6189ad67096"
+        },
+        {
+            "smallUrl": "http://photo.candou.com/s/o1/726dece4aa37b64009980582a029a3e3",
+            "originalUrl": "http://photo.candou.com/s/o0/726dece4aa37b64009980582a029a3e3"
+        },
+        {
+            "smallUrl": "http://photo.candou.com/s/o1/4d5436079d6a82b84bc4974d414dbf5f",
+            "originalUrl": "http://photo.candou.com/s/o0/4d5436079d6a82b84bc4974d414dbf5f"
+        }
+    ]
+}

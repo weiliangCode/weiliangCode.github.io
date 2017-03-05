@@ -1,0 +1,35 @@
+<ion-tabs class=" tabs-icon-top" id="m_tabs">
+	
+	<div class="m_tabsItem" ui-sref="{{item.sref}}" ng-click="tabsAction($index)" ng-repeat="item in tabs" ng-class="{active:selectIndex==$index}">
+		<img ng-src="{{item.tabsImg}}" ng-if="selectIndex != $index"/>
+		<img ng-src="{{item.tabsImgPress}}" ng-if="selectIndex == $index"/>
+		{{item.tabsText}}
+	</div>
+	
+	<ion-tab href="#tabs/home">
+		<ion-nav-view name="tab-home"></ion-nav-view>
+	</ion-tab>
+	<ion-tab href="#tabs/discount">
+		<ion-nav-view name="tab-discount"></ion-nav-view>
+	</ion-tab>
+	<ion-tab href="#tabs/gratis">
+		<ion-nav-view name="tab-gratis"></ion-nav-view>
+	</ion-tab>
+	<ion-tab href="#tabs/special">
+		<ion-nav-view name="tab-special"></ion-nav-view>
+	</ion-tab>
+	<ion-tab href="#tabs/hotList">
+		<ion-nav-view name="tab-hotList"></ion-nav-view>
+	</ion-tab>
+</ion-tabs>
+	
+	
+	
+	
+	
+	
+	
+
+		
+
+		

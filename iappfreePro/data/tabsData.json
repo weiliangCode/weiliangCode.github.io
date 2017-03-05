@@ -1,0 +1,33 @@
+[
+	{
+		"tabsText":"限免",
+		"tabsImg":"images/tabbar/tabbar_limitfree.png",
+		"tabsImgPress":"images/tabbar/tabbar_limitfree_press.png",
+		"sref":"tabs.home"
+	},
+	{
+		"tabsText":"降价",
+		"tabsImg":"images/tabbar/tabbar_reduceprice.png",
+		"tabsImgPress":"images/tabbar/tabbar_reduceprice_press.png",
+		"sref":"tabs.discount"
+	},
+	{
+		"tabsText":"免费",
+		"tabsImg":"images/tabbar/tabbar_appfree.png",
+		"tabsImgPress":"images/tabbar/tabbar_appfree_press.png",
+		"sref":"tabs.gratis"
+	},
+	{
+		"tabsText":"专题",
+		"tabsImg":"images/tabbar/tabbar_subject.png",
+		"tabsImgPress":"images/tabbar/tabbar_subject_press.png",
+		"sref":"tabs.special"
+	},
+	{
+		"tabsText":"热榜",
+		"tabsImg":"images/tabbar/tabbar_rank.png",
+		"tabsImgPress":"images/tabbar/tabbar_rank_press.png",
+		"sref":"tabs.hotList"
+	}
+
+]
