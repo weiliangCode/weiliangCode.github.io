@@ -63,6 +63,16 @@ app.config(['$stateProvider', '$urlRouterProvider','globalProvider', function($s
 			}
 		}
 	})
+	//应用详情
+	.state('tabs.appInfoD', {//配置项名
+		url: '/appInfoD/:id',//路径
+		views:{
+			'tab-discount': {//在tabs中有多个ion-nav-view，这个应该放在哪个之中
+				templateUrl: 'views/common/appInfo.html', //模板页面
+				controller:'infoCtrl'
+			}
+		}
+	})
 	//设置详情
 	.state('tabs.set', {//配置项名
 		url: '/set',
@@ -170,12 +180,18 @@ app.provider('global', function(){
 
 
 
-app.controller('discountCtrl', ['$scope', 'homeDataService','commonService', function($scope,homeDataService,commonService){
+app.controller('discountCtrl', ['$scope', 'homeDataService','commonService','$location',
+		function($scope,homeDataService,commonService,$location){
 	homeDataService.gethomeData({"group":"discount","page":1},function(data){
 		$scope.listData = data;
 		console.log(data);
 	},commonService.alertInfo);
 	
+	
+	$scope.showinfo = function(index){
+		var id = $scope.listData[index].applicationId;
+		$location.path('/tabs/appInfoD/'+id);
+	}
 	
 	
 }])
@@ -191,16 +207,28 @@ app.controller('gratisCtrl', ['$scope', 'homeDataService','commonService', funct
 	
 }])
 	 
+app.controller('infoCtrl', ['$scope', 'infoDataService','commonService', '$location',
+function($scope,infoDataService,commonService,$location){
+	infoDataService.getappinfoData(function(data){
+		$scope.infoData = data;
+		console.log(data);
+		
+	},commonService.alertInfo);
+	
+	
+	
+}])
+	 
 //自定义的服务
 //处理数据结构的
-app.service('homeDataService', ['$http', 'global', function($http, global){
+app.service('infoDataService', ['$http', 'global', function($http, global){
 	
-	//主页面栏目切换的数据
-	this.gethomeData = function(obj,successCallBack, errorCallBack){
+	//请求应用详情数据
+	this.getappinfoData = function(successCallBack, errorCallBack){
 		
-		$http.get(global.getPath()+'/'+ obj.group +'Data&page=' + obj.page + '.json')
+		$http.get(global.getPath()+'/appinfo&id=455680974.json')
 		.success(function(data){
-			successCallBack(data.applications);
+			successCallBack(data);
 		})
 		.error(function(error, code){
 			console.log(error,code)
@@ -217,19 +245,7 @@ app.service('homeDataService', ['$http', 'global', function($http, global){
 	}
 	
 	
-	//请求底部导航栏数据
-	this.getTabsData = function(successCallBack, errorCallBack){
-		
-		$http.get(global.getPath()+'/tabsData.json')
-		.success(function(data){
-			successCallBack(data);
-		})
-		.error(function(error, code){
-			console.log(error,code)
-			console.log('请求失败');
-			errorCallBack('', code)
-		})
-	}
+	
 	
 }])
 app.controller('homeCtrl', ['$scope', 'homeDataService','commonService', '$location',
@@ -297,28 +313,16 @@ function($scope,homeDataService,commonService,$location){
 	
 }])
 	 
-app.controller('infoCtrl', ['$scope', 'infoDataService','commonService', '$location',
-function($scope,infoDataService,commonService,$location){
-	infoDataService.getappinfoData(function(data){
-		$scope.infoData = data;
-		console.log(data);
-		
-	},commonService.alertInfo);
-	
-	
-	
-}])
-	 
 //自定义的服务
 //处理数据结构的
-app.service('infoDataService', ['$http', 'global', function($http, global){
+app.service('homeDataService', ['$http', 'global', function($http, global){
 	
-	//请求应用详情数据
-	this.getappinfoData = function(successCallBack, errorCallBack){
+	//主页面栏目切换的数据
+	this.gethomeData = function(obj,successCallBack, errorCallBack){
 		
-		$http.get(global.getPath()+'/appinfo&id=455680974.json')
+		$http.get(global.getPath()+'/'+ obj.group +'Data&page=' + obj.page + '.json')
 		.success(function(data){
-			successCallBack(data);
+			successCallBack(data.applications);
 		})
 		.error(function(error, code){
 			console.log(error,code)
@@ -335,7 +339,19 @@ app.service('infoDataService', ['$http', 'global', function($http, global){
 	}
 	
 	
-	
+	//请求底部导航栏数据
+	this.getTabsData = function(successCallBack, errorCallBack){
+		
+		$http.get(global.getPath()+'/tabsData.json')
+		.success(function(data){
+			successCallBack(data);
+		})
+		.error(function(error, code){
+			console.log(error,code)
+			console.log('请求失败');
+			errorCallBack('', code)
+		})
+	}
 	
 }])
 

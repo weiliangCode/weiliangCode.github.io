@@ -19,7 +19,7 @@
 			</div>
 			<!-- 列表数据 -->
 			<ul class="main-list">
-				<li class="main-item" ng-repeat="item in listData | filter : {name:searchInt}">
+				<li class="main-item" ng-repeat="item in listData | filter : {name:searchInt}" ng-click="showinfo($index)">
 					<div class="item-top">
 						<div class="item-left">
 							<img ng-src="{{item.iconUrl}}"/>

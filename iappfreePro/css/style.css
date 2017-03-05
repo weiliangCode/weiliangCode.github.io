@@ -25,6 +25,7 @@ input{outline:none;}
 /*------------底部导航-----------------------*/
 #m_tabs .tabs{
 	background:url(../images/tabbar/tabbar_bg.png);
+	background-size: 100% 100%;
 	color: #eaeaea;
 	display: flex;
 	width: 100%;
@@ -73,13 +74,23 @@ input{outline:none;}
 }
 
 
-
+/*button back-button buttons button-clear header-item*/
 /*--------------头部----------------------*/
-.bar.bar-positive{
-	background: url(../images/defailt/navigationbar.png);
+.nav-bar-block .bar-positive .back-button.header-item{
+	background: url(../images/but/buttonbar_back.png);
+	width: 60px;
+	height: 29px;
 }
 
-.bar.bar-positive .button{
+.nav-bar-block .bar-positive .ion-ios-arrow-back{
+	display: none;
+}
+.bar.bar-positive{
+	background: url(../images/defailt/navigationbar.png);
+	background-size: 100% 100%;
+}
+
+.bar.bar-positive .left-buttons .button ,.bar.bar-positive .buttons-right .button {
 	width: 43px;
 	height: 29px;
 	border: 1px solid #cbcbcb;
@@ -431,5 +442,4 @@ input{outline:none;}
 #set li span{
 	flex: 1;
 }
-
 

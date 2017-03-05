@@ -1,13 +1,28 @@
 <ion-view view-title="热榜">
 	<ion-nav-buttons side="left">
-		<button class="button">分类</button>
+		<button class="button ">分类</button>
 	</ion-nav-buttons>
 	
 	<ion-nav-buttons side="right">
-		<button class="button">设置</button>
+		<button class="button" ng-click="setBtn()">设置</button>
 	</ion-nav-buttons>
-	
-	<ion-content>
-			热榜
+
+		
+	<ion-content delegate-handle="content" id="home">
+
+		<!--下拉加载-->
+		<ion-refresher spinner="dots" on-refresh="refresh()"></ion-refresher>
+		
+		<div>
+			<div class="search">
+				<span class="icon ion-search"></span>
+				<input type="text" placeholder="60万款应用搜搜看" ng-model="searchInt"/>
+			</div>
+		</div>
+		
+		<!--上拉加载-->
+		<ion-infinite-scroll ng-if="ifshowLoadMore" icon="ion-loading-c" on-infinite="loadMoreData()">
+		</ion-infinite-scroll>
+		
 	</ion-content>
 </ion-view>
